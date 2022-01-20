@@ -1,0 +1,22 @@
+﻿img {
+    width: 500px;
+    height: auto;
+}
+
+body {
+    text-align: center;
+}
+
+p {
+    margin: 0 auto;
+    width: 50%;
+}
+
+ul {
+    list-style-position: inside;
+    list-style-type: none;
+}
+
+input[type='number'] {
+    width: 55px;
+} 

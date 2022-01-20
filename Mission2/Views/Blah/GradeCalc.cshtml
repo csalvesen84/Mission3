@@ -1,0 +1,47 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Connor's IS 413 Grade Calculator";
+}
+
+@model GradeCalcModel
+
+
+<div id="accordion">
+    <div class="card">
+        <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    IS 413 Grade Calculator
+                </button>
+            </h5>
+        </div>
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+                <form method="post">
+                    <div asp-validation-summary="All" style="color:red;"></div>
+                    <label>Assignments:</label>
+                    <input id="assignments" type="number" asp-for="assignments" />
+                    <label>%</label><br />
+                    <label>Group Project:</label>
+                    <input id="project" type="number" asp-for="project" />
+                    <label>%</label><br />
+                    <label>Quizzes:</label>
+                    <input id="quizzes" type="number" asp-for="quizzes" />
+                    <label>%</label><br />
+                    <label>Exams:</label>
+                    <input id="exams" type="number" asp-for="exams" />
+                    <label>%</label><br />
+                    <label>Intex:</label>
+                    <input id="intex" type="number" asp-for="intex" />
+                    <label>%</label><br /><br />
+                    <button type="submit" id="calculate" class="btn btn-primary">Calculate Grades!</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="~/js/GradeCalc.js"></script>
